@@ -1,15 +1,8 @@
 import { FaStar } from "react-icons/fa6";
-import {
-  Form,
-  Input,
-  Select,
-  SelectItem,
-  Checkbox,
-  Button,
-  Textarea,
-} from "@nextui-org/react";
-import { useState } from "react";
+import { Form, Input, Button, Textarea } from "@nextui-org/react";
+import ReCaptcha from "react-google-recaptcha";
 const FormElement = () => {
+  const reCaptchaKey = "6LeSaMUqAAAAAMaCGv33FkX02hJKPDpKANafgpT7";
   return (
     <div className="pt-8 pl-3">
       <div className="space-y-2">
@@ -48,6 +41,8 @@ const FormElement = () => {
           placeholder="Enter your description"
           variant="bordered"
         />
+        {/* google react-reCaptcha */}
+          <ReCaptcha sitekey={reCaptchaKey}></ReCaptcha>
         <Button type="submit" radius="none" className="bg-black text-white">
           Submit
         </Button>

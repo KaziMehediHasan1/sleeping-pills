@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Welcome() {
   return (
-    <div className="mt-5">
+    <div className="mt-5 px-4 sm:px-0 md:px-6 lg:px-0">
       <h1 className="text-black text-center font-semibold text-xl lg:text-2xl">
         Welcome to Our 24/7 E-Pharmacy
       </h1>

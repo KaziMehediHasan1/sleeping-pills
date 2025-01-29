@@ -62,12 +62,12 @@ const Review = () => {
             const convertArr = getUsers.split(",");
             const getFirstLatter = convertArr?.map((str) => str[0]);
             return (
-              <div className="pt-8 flex items-center space-x-4">
-                <h1 className="text-3xl font-semibold bg-gray-200 rounded-full text-center w-16 h-16 py-3">
+              <div className="pt-8 flex sm:items-center space-x-4">
+                <h1 className="sm:text-3xl text-xl font-semibold bg-gray-200 rounded-full text-center w-14 h-12 sm:w-16 sm:h-16 py-2 sm:py-3">
                   {getFirstLatter}
                 </h1>
                 <div className="border flex flex-col border-gray-200 rounded p-3 w-full">
-                  <div className="flex items-center space-x-">
+                  <div className="flex flex-wrap items-center">
                     {review.user.length > 10 ? (
                       <>
                         <IoMdStar className="text-xl text-yellow-300 font-semibold " />

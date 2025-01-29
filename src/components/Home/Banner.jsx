@@ -8,10 +8,10 @@ const Banner = () => {
       <img
         src="https://www.sleepingpillsuk.com/images/banner2.jpg"
         alt="banner-img"
-        className="lg:w-[80%] w-full object-cover"
+        className="lg:w-[80%] h-44 sm:h-[200px] md:h-[265px] w-full object-cover"
       />
 
-      <div className="w-[20%] md:w-full px-2 bg-[#057793] lg:block mt-1 lg:mt-0">
+      <div className="lg:w-[20%] sm:w-full px-2 bg-[#057793] lg:block mt-1 lg:mt-0">
         <div className="py-4 pt ">
           <img
             src="https://www.sleepingpillsuk.com/images/free_pills_icon.png"

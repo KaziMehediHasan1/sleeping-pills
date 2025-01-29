@@ -27,14 +27,15 @@ const Home = () => {
       <CommonWrapper>
         {/* <Button onClick={() => setPage(page + 1)}>Page {page}</Button>
         <Button onClick={() => setSeeMore(true)}>See More</Button> */}
-        <Banner />
-        <Facilities />
-        <Welcome />
-        <Card />
-        <SeePills />
-        <Articles />
-        <LatestBlog />
-        
+        <div className="xl:w-[1250px] mx-auto">
+          <Banner />
+          <Facilities />
+          <Welcome />
+          <Card />
+          <SeePills />
+          <Articles />
+          <LatestBlog />
+        </div>
         {/* <Pagination
           radius="none"
           initialPage={1}

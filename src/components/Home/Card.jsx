@@ -232,10 +232,10 @@ const Card = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between flex-wrap gap-4 mt-5">
+    <div className="flex md:px-10 lg:px-0 items-center justify-between flex-wrap gap-4 mt-5 px-5 sm:px-0">
       {cards?.map((card) => {
         return (
-          <div className="border w-[280px] p-5">
+          <div className="border sm:w-[325px] w-[380px] p-5">
             <h1 className="text-xl font-semibold text-center pb-3">
               {card.title}
             </h1>
@@ -260,9 +260,9 @@ const Card = () => {
             {/* selection pills */}
             <PillSelection />
             {/* button section */}
-            <div className="flex items-center justify-around pt-4 space-x-2">
-              <Button className=" uppercase font-semibold">View info</Button>
-              <Button className="max-w-28 uppercase  font-semibold flex items-center space-x-1">
+            <div className="flex items-center justify-center md:justify-between pt-4 space-x-6 sm:space-x-10 md:space-x-2">
+              <Button className=" uppercase font-semibold w-[120px] ">View info</Button>
+              <Button className="max-w-36 uppercase  font-semibold flex items-center space-x-1">
                 <span className="text-7xl">
                   <TiShoppingCart />
                 </span>

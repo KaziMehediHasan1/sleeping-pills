@@ -23,7 +23,7 @@ const SeePills = () => {
     console.log(event.currentTarget);
   };
   return (
-    <div className="mt-8 flex flex-wrap items-center justify-between  overflow-hidden">
+    <div className="mt-8 flex justify-center flex-wrap items-center  md:px-10 lg:px-0 md:justify-between space-y-4 sm:space-y-0  overflow-hidden">
       {data?.map((item) => {
         return (
           <div className="max-w-72 gap-3  hover:shadow-2xl group hover:shadow-black">

@@ -32,7 +32,7 @@ const PillSelection = () => {
   return (
     <div>
       <Select>
-        <SelectTrigger className="w-[250px] mx-auto border focus:border-none focus:ring-0 rounded-none">
+        <SelectTrigger className="w-[275px] sm:w-[280px] mx-auto border focus:border-none focus:ring-0 rounded-none">
           <SelectValue placeholder="Select a Pills" />
         </SelectTrigger>
         <SelectContent>

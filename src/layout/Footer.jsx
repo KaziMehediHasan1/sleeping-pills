@@ -1,80 +1,118 @@
-import { Divider } from '@nextui-org/react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { LinkedInLogoIcon } from '@radix-ui/react-icons';
-import { Icons } from '@/assets/icons/Icons';
+import {
+  IoMdArrowDropright,
+  IoMdLock,
+  IoLogoFacebook,
+  IoLogoYoutube,
+  IoLogoPinterest,
+  IoLogoInstagram,
+} from "react-icons/io";
+import { AiFillTikTok } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="  max-w-7xl w-[93%] mx-auto">
-      <div className="  py-10 gap-10 lg:gap-0   flex justify-between">
-        <div className="md:flex-row flex-col flex gap-10 items-center">
-          <Link
-            to={'/'}
-            className="flex items-center  justify-center text-base font-semibold"
-          >
-            Healthify
-          </Link>
-        </div>
-        <div className="flex gap-8 justify-center">
-          <Icons.facebookIcon className=" h-6 w-6" />
-          <Icons.youtubeIcon className=" h-6 w-6" />
-
-          <LinkedInLogoIcon className=" h-6 w-6" />
+    <footer className=" w-full text-white mx-auto bg-[#002139] mt-7">
+      <div className="xl:w-[1250px] mx-auto">
+        <div className="p-4 grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-4 gap-5">
+          <div>
+            <h1>Support</h1>
+            <div className="border border-b-1 border-[#0e3e61] my-2"></div>
+            <p>
+              <span className="font-semibold text-sm">Working hours :</span>{" "}
+              <span className="text-xs">24 hours a day</span>
+            </p>
+            <p>
+              <span className="font-semibold text-sm">Working days :</span>{" "}
+              <span className="text-xs">Monday to Sunday </span>
+            </p>
+          </div>
+          {/*  */}
+          <div>
+            <h1>Information</h1>
+            <div className="flex  space-x-4">
+              <div>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">About us</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Privacy Policy</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Contact us</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Blogs</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Sitemap</span>
+                </p>
+              </div>
+              {/* second section */}
+              <div>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Delivery Inpormation</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Trams & Conditions</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Returns</span>
+                </p>
+                <p className="flex items-center space-x-1">
+                  <IoMdArrowDropright className="text-xl text-[#087ea5]" />
+                  <span className="text-xs">Share With Friends</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="min-w-[160px] flex items-center">
+              <img
+                src="https://www.sleepingpillsuk.com/images/secured.png"
+                alt="logo"
+              />
+              <p>Shop online with us Safely & securely</p>
+            </div>
+            <img
+              src="https://www.sleepingpillsuk.com/images/dmca_protected_16_120.png"
+              alt="logo"
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.sleepingpillsuk.com/images/satisfaction.png"
+              alt="logo"
+            />
+            <div className="flex items-center space-x-1">
+              <IoMdLock />
+              <p>Secure Shopping</p>
+            </div>
+            <img
+              src="https://www.sleepingpillsuk.com/images/icons_payment.png"
+              alt="card-logo"
+            />
+            <div className="flex items-center space-x-3 pt-2">
+              <IoLogoFacebook className="text-4xl  font-semibold text-blue-500" />
+              <IoLogoInstagram className="text-4xl  font-semibold text-red-500" />
+              <IoLogoPinterest className="text-4xl  font-semibold text-red-500" />
+              <IoLogoYoutube className="text-4xl  font-semibold text-red-500" />
+              <AiFillTikTok className="text-4xl  font-semibold text-white" />
+            </div>
+          </div>
         </div>
       </div>
-
-      <Divider className="mb-8 bg-divider" />
-
-      <div className="pb-8 flex flex-col md:flex-row  gap-4 justify-between items-center ">
-        <p className="text-tiny  text-light-50  text-center">
-          2023 <span className=" hover:text-danger"> Pewds. </span> All right
-          reserved.
-        </p>
-        <ul className=" list-none flex justify-center flex-wrap items-center   gap-4">
-          {[
-            { name: 'Privacy Policy', path: 'privacy-policy' },
-
-            { name: 'Terms of Service', path: 'tos' },
-            { name: 'Cookies Settings', path: 'cookies-settings' },
-          ].map((el, index) => {
-            return (
-              <Link key={index} to={`/${el?.path}`}>
-                <motion.li
-                  variants={hoverVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                  className=" cursor-pointer text-light-50  text-tiny  underline underline-offset-1"
-                >
-                  {el.name}
-                </motion.li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
+      <p className="bg-black text-white text-center py-1">
+        2025 © Sleeping Pills. All Rights Reserved.
+      </p>
     </footer>
   );
 };
 
 export default Footer;
-const hoverVariants = {
-  hidden: {
-    opacity: 0,
-    x: 0,
-  },
-  visible: {
-    opacity: 1,
-
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-    },
-  },
-  hover: {
-    scale: [1, 1.06, 1, 1.06, 1],
-    originX: 0,
-    color: '#428ee6',
-  },
-};

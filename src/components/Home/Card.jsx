@@ -1,4 +1,4 @@
-import React from "react";
+
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import PillSelection from "./PillSelection";
@@ -231,6 +231,7 @@ const Card = () => {
       ),
     },
   ];
+
   return (
     <div className="flex md:px-10 lg:px-0 items-center justify-between flex-wrap gap-4 mt-5 px-5 sm:px-0">
       {cards?.map((card) => {

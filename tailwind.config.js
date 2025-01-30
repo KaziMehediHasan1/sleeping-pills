@@ -10,7 +10,7 @@ module.exports = {
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/components/divider.js"
+    "./node_modules/@heroui/theme/dist/components/(divider|tabs).js"
   ],
   theme: {
     container: {

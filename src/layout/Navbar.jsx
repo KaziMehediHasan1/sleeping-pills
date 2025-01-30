@@ -9,11 +9,13 @@ import {
   Button,
 } from "@nextui-org/react";
 import DropdownMenuBar from "../components/Dropdown";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Header = () => {
+  const location = useLocation();
+  const homePath = location?.pathname;
   const [scrooling, setScrooling] = useState(false);
   const NavLinks = [
     {
@@ -30,7 +32,7 @@ const Header = () => {
     },
     {
       title: "Pruoducts",
-      path: "/products",
+      path: "/product",
       subMenu: {
         sleepingTabltes: "sleepingTabltes",
         anxiety: "Anxiety Medication",
@@ -113,9 +115,9 @@ const Header = () => {
             <img
               src="https://www.sleepingpillsuk.com/images/head_btc.png"
               alt="logo"
-              className={`relative`}
+              className="relative"
             />
-            <div className={`border z-[-10] border-dashed mr-3 border-black space-x-4 rounded-lg bg-[#F7F7F7] py-2 flex px-6 ${scrooling && "hidden"}  absolute lg:top-[280px] lg:right-[250px] md:right-4 md:top-56 top-[160px] right-3`}>
+            <div className={`border z-[-10] border-dashed mr-3 border-black space-x-4 rounded-lg bg-[#F7F7F7] py-2 flex px-6 ${scrooling && "hidden"} ${homePath === "/product" && "hidden"}  absolute lg:top-[280px] lg:right-[250px] md:right-4 md:top-56 top-[160px] right-3`}>
               <div className="sm:text-[17px] font-semibold uppercase">
                 <p>Get 10% off on </p> <p>every order!</p>
               </div>
